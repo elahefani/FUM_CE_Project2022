@@ -13,7 +13,17 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    friend class Game;
     ~MainWindow();
+
+private slots:
+    void on_choice2_clicked();
+    void on_choice3_clicked();
+    void on_choice4_clicked();
+    void on_choice5_clicked();
+    void on_choice6_clicked();
+    void on_choice7_clicked();
+    void on_choice8_clicked();
 
 private:
     Ui::MainWindow *ui;
