@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>383</width>
-    <height>416</height>
+    <width>467</width>
+    <height>472</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>351</width>
-      <height>371</height>
+      <width>411</width>
+      <height>421</height>
      </rect>
     </property>
     <property name="text">
@@ -30,11 +30,17 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>100</y>
+      <x>140</x>
+      <y>120</y>
       <width>171</width>
       <height>171</height>
      </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
     </property>
     <property name="autoFillBackground">
      <bool>true</bool>
@@ -143,7 +149,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>383</width>
+     <width>467</width>
      <height>21</height>
     </rect>
    </property>

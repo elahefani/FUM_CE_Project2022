@@ -2,10 +2,21 @@
 #define PLAYER_H
 
 class Player{
-public:
+private:
     long long int Money;
     int Pair;
-    int Cordinates;
+    int Coordinates;
+public:
+
+    Player();
+    void setMoney(long long int);
+    long long int getMoney();
+
+    void setPair( int);
+    int getPair();
+
+    //void setCoordinates( int);
+    //int getCoordinates();
 };
 
 #endif // PLAYER_H

@@ -41,15 +41,17 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(383, 416);
+        MainWindow->resize(467, 472);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         Board = new QLabel(centralwidget);
         Board->setObjectName(QString::fromUtf8("Board"));
-        Board->setGeometry(QRect(20, 10, 351, 371));
+        Board->setGeometry(QRect(20, 10, 411, 421));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(110, 100, 171, 171));
+        groupBox->setGeometry(QRect(140, 120, 171, 171));
+        groupBox->setMouseTracking(false);
+        groupBox->setTabletTracking(false);
         groupBox->setAutoFillBackground(true);
         choice2 = new QRadioButton(groupBox);
         choice2->setObjectName(QString::fromUtf8("choice2"));
@@ -76,7 +78,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 383, 21));
+        menubar->setGeometry(QRect(0, 0, 467, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

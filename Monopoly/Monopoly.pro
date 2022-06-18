@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     Game.cpp \
+    Player.cpp \
     main.cpp \
     mainwindow.cpp
 
