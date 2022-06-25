@@ -30,14 +30,9 @@ void MainWindow::on_choice2_clicked()
     QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
+
     CreatePlayers(barrow);
     CreatePlayers(baseball);
-    CreatePlayers(car);
-    CreatePlayers(dog);
-    CreatePlayers(dragon);
-    CreatePlayers(ship);
-    CreatePlayers(soccer);
-    CreatePlayers(surfer);
 
 }
 
@@ -51,6 +46,10 @@ void MainWindow::on_choice3_clicked()
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
 
+    CreatePlayers(barrow);
+    CreatePlayers(baseball);
+    CreatePlayers(car);
+
 }
 
 void MainWindow::on_choice4_clicked()
@@ -62,6 +61,11 @@ void MainWindow::on_choice4_clicked()
     QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
+
+    CreatePlayers(barrow);
+    CreatePlayers(baseball);
+    CreatePlayers(car);
+    CreatePlayers(dog);
 
 }
 
@@ -75,6 +79,12 @@ void MainWindow::on_choice5_clicked()
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
 
+    CreatePlayers(barrow);
+    CreatePlayers(baseball);
+    CreatePlayers(car);
+    CreatePlayers(dog);
+    CreatePlayers(dragon);
+
 }
 
 void MainWindow::on_choice6_clicked()
@@ -86,6 +96,13 @@ void MainWindow::on_choice6_clicked()
     QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
+
+    CreatePlayers(barrow);
+    CreatePlayers(baseball);
+    CreatePlayers(car);
+    CreatePlayers(dog);
+    CreatePlayers(dragon);
+    CreatePlayers(ship);
 
 }
 
@@ -99,6 +116,14 @@ void MainWindow::on_choice7_clicked()
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
 
+    CreatePlayers(barrow);
+    CreatePlayers(baseball);
+    CreatePlayers(car);
+    CreatePlayers(dog);
+    CreatePlayers(dragon);
+    CreatePlayers(ship);
+    CreatePlayers(soccer);
+
 }
 
 void MainWindow::on_choice8_clicked()
@@ -110,6 +135,16 @@ void MainWindow::on_choice8_clicked()
     QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
+
+    CreatePlayers(barrow);
+    CreatePlayers(baseball);
+    CreatePlayers(car);
+    CreatePlayers(dog);
+    CreatePlayers(dragon);
+    CreatePlayers(ship);
+    CreatePlayers(soccer);
+    CreatePlayers(surfer);
+
 }
 
 void MainWindow::CreatePlayers(int name){
