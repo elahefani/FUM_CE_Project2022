@@ -2,9 +2,12 @@
 #include <mainwindow.h>
 
 Player::Player(){
-    Money = 0;
+    Money = 1500;
     Pair = 0;
-    Coordinates = 0;
+    Coordinates.x = 0;
+    Coordinates.y = 0;
+    Coordinates.z = 0;
+    Coordinates.t = 0;
 }
 
 void Player::setMoney(long long int Money){

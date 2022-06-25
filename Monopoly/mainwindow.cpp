@@ -9,12 +9,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
-    ui->Board->setPixmap(pm);
-    ui->Board->setScaledContents(true);
-    QLabel *BoardImage = new QLabel(this);
-
 }
 
 MainWindow::~MainWindow()
@@ -29,6 +23,9 @@ void MainWindow::on_choice2_clicked()
     ui->groupBox->hide();
     ui->choice2->hide();
     game.setNumOfPlayer(2);
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
+    ui->Board->setPixmap(pm);
+    ui->Board->setScaledContents(true);
 
 }
 
@@ -38,6 +35,9 @@ void MainWindow::on_choice3_clicked()
     ui->groupBox->hide();
     ui->choice3->hide();
     game.setNumOfPlayer(3);
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
+    ui->Board->setPixmap(pm);
+    ui->Board->setScaledContents(true);
 
 }
 
@@ -47,6 +47,9 @@ void MainWindow::on_choice4_clicked()
     ui->groupBox->hide();
     ui->choice4->hide();
     game.setNumOfPlayer(4);
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
+    ui->Board->setPixmap(pm);
+    ui->Board->setScaledContents(true);
 
 }
 
@@ -56,6 +59,9 @@ void MainWindow::on_choice5_clicked()
     ui->groupBox->hide();
     ui->choice5->hide();
     game.setNumOfPlayer(5);
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
+    ui->Board->setPixmap(pm);
+    ui->Board->setScaledContents(true);
 
 }
 
@@ -65,6 +71,9 @@ void MainWindow::on_choice6_clicked()
     ui->groupBox->hide();
     ui->choice6->hide();
     game.setNumOfPlayer(6);
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
+    ui->Board->setPixmap(pm);
+    ui->Board->setScaledContents(true);
 
 }
 
@@ -74,6 +83,9 @@ void MainWindow::on_choice7_clicked()
     ui->groupBox->hide();
     ui->choice7->hide();
     game.setNumOfPlayer(7);
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
+    ui->Board->setPixmap(pm);
+    ui->Board->setScaledContents(true);
 
 }
 
@@ -83,4 +95,7 @@ void MainWindow::on_choice8_clicked()
     ui->groupBox->hide();
     ui->choice8->hide();
     game.setNumOfPlayer(8);
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
+    ui->Board->setPixmap(pm);
+    ui->Board->setScaledContents(true);
 }

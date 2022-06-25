@@ -1,11 +1,17 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+
+struct coor
+{
+    int x,y,z,t;
+};
+
 class Player{
 private:
     long long int Money;
     int Pair;
-    int Coordinates;
+    coor Coordinates;
 public:
 
     Player();

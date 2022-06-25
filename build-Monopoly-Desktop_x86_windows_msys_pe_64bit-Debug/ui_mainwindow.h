@@ -41,15 +41,15 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(467, 472);
+        MainWindow->resize(476, 488);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         Board = new QLabel(centralwidget);
         Board->setObjectName(QString::fromUtf8("Board"));
-        Board->setGeometry(QRect(20, 10, 411, 421));
+        Board->setGeometry(QRect(20, 10, 441, 451));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(140, 120, 171, 171));
+        groupBox->setGeometry(QRect(150, 140, 171, 171));
         groupBox->setMouseTracking(false);
         groupBox->setTabletTracking(false);
         groupBox->setAutoFillBackground(true);
@@ -78,7 +78,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 467, 21));
+        menubar->setGeometry(QRect(0, 0, 476, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -92,7 +92,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        Board->setText(QCoreApplication::translate("MainWindow", "ShowBoardImage", nullptr));
+        Board->setText(QString());
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Please choose number of players", nullptr));
         choice2->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
         choice3->setText(QCoreApplication::translate("MainWindow", "3", nullptr));
