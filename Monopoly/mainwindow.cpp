@@ -3,6 +3,10 @@
 #include <QPixmap>
 #include <QMessageBox>
 #include <Game.h>
+#include <string>
+
+
+enum PlayerName{barrow,baseball,car,dog,dragon,ship,soccer,surfer};
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -26,6 +30,14 @@ void MainWindow::on_choice2_clicked()
     QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
+    CreatePlayers(barrow);
+    CreatePlayers(baseball);
+    CreatePlayers(car);
+    CreatePlayers(dog);
+    CreatePlayers(dragon);
+    CreatePlayers(ship);
+    CreatePlayers(soccer);
+    CreatePlayers(surfer);
 
 }
 
@@ -98,4 +110,48 @@ void MainWindow::on_choice8_clicked()
     QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
+}
+
+void MainWindow::CreatePlayers(int name){
+    QLabel *player = new QLabel(this);
+    switch (name) {
+    case barrow:
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/barrow.png"));
+        player->setGeometry(460,405,25,25);
+        break;
+    case baseball:
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/baseball.png"));
+        player->setGeometry(460,425,25,25);
+        break;
+    case car:
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/car.png"));
+        player->setGeometry(440,405,25,25);
+        break;
+    case dog:
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/dog.png"));
+        player->setGeometry(440,425,25,25);
+        break;
+    case dragon:
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/dragon.png"));
+        player->setGeometry(420,405,25,25);
+        break;
+    case ship:
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/ship.png"));
+        player->setGeometry(420,425,25,25);
+        break;
+    case soccer:
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/soccer.png"));
+        player->setGeometry(420,445,25,25);
+        break;
+    case surfer:
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/surfer.png"));
+        player->setGeometry(440,445,25,25);
+        break;
+    default:
+        break;
+    }
+    player->setFixedWidth(25);
+    player->setFixedHeight(25);
+    player->setScaledContents(true);
+    player->show();
 }

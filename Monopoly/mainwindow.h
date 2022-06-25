@@ -3,6 +3,7 @@
 #include <Game.h>
 #include <Player.h>
 #include <QMainWindow>
+#include <string>
 
 
 
@@ -17,6 +18,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     Game game;
+    void CreatePlayers(int );
     ~MainWindow();
 
 private slots:
