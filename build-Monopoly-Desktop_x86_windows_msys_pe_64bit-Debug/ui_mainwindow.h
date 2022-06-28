@@ -14,6 +14,7 @@
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -33,6 +34,7 @@ public:
     QRadioButton *choice6;
     QRadioButton *choice7;
     QRadioButton *choice8;
+    QPushButton *Chance;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -73,6 +75,9 @@ public:
         choice8 = new QRadioButton(groupBox);
         choice8->setObjectName(QString::fromUtf8("choice8"));
         choice8->setGeometry(QRect(10, 140, 85, 20));
+        Chance = new QPushButton(centralwidget);
+        Chance->setObjectName(QString::fromUtf8("Chance"));
+        Chance->setGeometry(QRect(200, 350, 101, 61));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -95,6 +100,7 @@ public:
         choice6->setText(QCoreApplication::translate("MainWindow", "6", nullptr));
         choice7->setText(QCoreApplication::translate("MainWindow", "7", nullptr));
         choice8->setText(QCoreApplication::translate("MainWindow", "8", nullptr));
+        Chance->setText(QCoreApplication::translate("MainWindow", "Chance", nullptr));
     } // retranslateUi
 
 };
