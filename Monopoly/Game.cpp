@@ -1,6 +1,6 @@
 //#include "ui_mainwindow.h"
-#include<Game.h>
-#include<mainwindow.h>
+#include <Game.h>
+#include <mainwindow.h>
 
 Game::Game(){
     NumOfPlayer = 0;

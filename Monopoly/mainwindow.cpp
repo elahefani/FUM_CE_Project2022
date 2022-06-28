@@ -4,7 +4,8 @@
 #include <QMessageBox>
 //#include <Game.h>
 #include <string>
-
+#include <iostream>
+#include <time.h>
 
 enum PlayerName{barrow,baseball,car,dog,dragon,ship,soccer,surfer};
 
@@ -20,6 +21,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+int randomgenerator(){
+
+    int num1;
+    srand(time(0));
+    num1 = (rand() % 6) + 1;
+
+    return num1;
+}
 
 void MainWindow::on_choice2_clicked()
 {

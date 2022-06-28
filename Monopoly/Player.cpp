@@ -1,6 +1,6 @@
 //#include <Player.h>
 #include <mainwindow.h>
-#include<QString>
+#include <QString>
 
 Player::Player(){
     Money = 1500;

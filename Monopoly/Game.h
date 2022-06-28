@@ -1,6 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
-#include<Player.h>
+#include <Player.h>
 
 #define MaxSizeOfPlayer 8
 
