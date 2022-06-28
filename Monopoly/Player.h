@@ -28,7 +28,7 @@ public:
     //coordinate getCoordinates();
 
     void setPlayerName(QString );
-    QString getPlayrtName();
+    QString getPlayerName();
 };
 
 #endif // PLAYER_H

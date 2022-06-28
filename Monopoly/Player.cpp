@@ -39,6 +39,6 @@ void Player::setPlayerName(QString PlayerName){
     this->PlayerName =PlayerName;
 }
 
-QString Player::getPlayrtName(){
+QString Player::getPlayerName(){
     return PlayerName;
 }
