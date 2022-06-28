@@ -167,7 +167,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.y=425;
         Coordinates.height=25;
         Coordinates.width=25;
-        game.player[0].setCoordinates(Coordinates);
+        game.player[1].setCoordinates(Coordinates);
         break;
     case car:
         player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/car.png"));
@@ -176,7 +176,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.y=405;
         Coordinates.height=25;
         Coordinates.width=25;
-        game.player[0].setCoordinates(Coordinates);
+        game.player[2].setCoordinates(Coordinates);
         break;
     case dog:
         player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/dog.png"));
@@ -185,7 +185,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.y=425;
         Coordinates.height=25;
         Coordinates.width=25;
-        game.player[0].setCoordinates(Coordinates);
+        game.player[3].setCoordinates(Coordinates);
         break;
     case dragon:
         player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/dragon.png"));
@@ -194,7 +194,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.y=405;
         Coordinates.height=25;
         Coordinates.width=25;
-        game.player[0].setCoordinates(Coordinates);
+        game.player[4].setCoordinates(Coordinates);
         break;
     case ship:
         player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/ship.png"));
@@ -203,7 +203,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.y=425;
         Coordinates.height=25;
         Coordinates.width=25;
-        game.player[0].setCoordinates(Coordinates);
+        game.player[5].setCoordinates(Coordinates);
         break;
     case soccer:
         player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/soccer.png"));
@@ -212,7 +212,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.y=445;
         Coordinates.height=25;
         Coordinates.width=25;
-        game.player[0].setCoordinates(Coordinates);
+        game.player[6].setCoordinates(Coordinates);
         break;
     case surfer:
         player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/surfer.png"));
@@ -221,7 +221,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.y=445;
         Coordinates.height=25;
         Coordinates.width=25;
-        game.player[0].setCoordinates(Coordinates);
+        game.player[7].setCoordinates(Coordinates);
         break;
     default:
         break;
