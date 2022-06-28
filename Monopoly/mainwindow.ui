@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>498</width>
-    <height>503</height>
+    <width>644</width>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>461</width>
-      <height>461</height>
+      <width>600</width>
+      <height>600</height>
      </rect>
     </property>
     <property name="text">
@@ -30,8 +30,8 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>140</y>
+      <x>240</x>
+      <y>190</y>
       <width>171</width>
       <height>171</height>
      </rect>
@@ -146,8 +146,8 @@
    <widget class="QPushButton" name="Chance">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>350</y>
+      <x>280</x>
+      <y>410</y>
       <width>101</width>
       <height>61</height>
      </rect>

@@ -164,7 +164,7 @@ void MainWindow::CreatePlayers(int name){
     switch (name) {
     case barrow:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/barrow.png"));
-        player->setGeometry(460,405,25,25);
+        player->setGeometry(590,535,25,25);
         Coordinates.x=460;
         Coordinates.y=405;
         Coordinates.height=25;
@@ -173,7 +173,7 @@ void MainWindow::CreatePlayers(int name){
         break;
     case baseball:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/baseball.png"));
-        player->setGeometry(460,425,25,25);
+        player->setGeometry(590,555,25,25);
         Coordinates.x=460;
         Coordinates.y=425;
         Coordinates.height=25;
@@ -182,7 +182,7 @@ void MainWindow::CreatePlayers(int name){
         break;
     case car:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/car.png"));
-        player->setGeometry(440,405,25,25);
+        player->setGeometry(570,535,25,25);
         Coordinates.x=440;
         Coordinates.y=405;
         Coordinates.height=25;
@@ -191,7 +191,7 @@ void MainWindow::CreatePlayers(int name){
         break;
     case dog:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/dog.png"));
-        player->setGeometry(440,425,25,25);
+        player->setGeometry(570,555,25,25);
         Coordinates.x=440;
         Coordinates.y=425;
         Coordinates.height=25;
@@ -200,7 +200,7 @@ void MainWindow::CreatePlayers(int name){
         break;
     case dragon:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/dragon.png"));
-        player->setGeometry(420,405,25,25);
+        player->setGeometry(550,535,25,25);
         Coordinates.x=420;
         Coordinates.y=405;
         Coordinates.height=25;
@@ -209,7 +209,7 @@ void MainWindow::CreatePlayers(int name){
         break;
     case ship:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/ship.png"));
-        player->setGeometry(420,425,25,25);
+        player->setGeometry(550,555,25,25);
         Coordinates.x=420;
         Coordinates.y=425;
         Coordinates.height=25;
@@ -218,7 +218,7 @@ void MainWindow::CreatePlayers(int name){
         break;
     case soccer:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/soccer.png"));
-        player->setGeometry(420,445,25,25);
+        player->setGeometry(550,575,25,25);
         Coordinates.x=420;
         Coordinates.y=445;
         Coordinates.height=25;
@@ -227,7 +227,7 @@ void MainWindow::CreatePlayers(int name){
         break;
     case surfer:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/surfer.png"));
-        player->setGeometry(440,445,25,25);
+        player->setGeometry(570,575,25,25);
         Coordinates.x=440;
         Coordinates.y=445;
         Coordinates.height=25;
@@ -292,27 +292,27 @@ void MainWindow::on_Chance_clicked()
     switch (number2)
     {
     case 1:
-        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/1.jpg"));
+        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/1.jpg"));
         chancepic2->setGeometry(240,245,45,45);
         break;
     case 2:
-        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/1.jpg"));
+        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/2.jpg"));
         chancepic2->setGeometry(240,245,45,45);
         break;
     case 3:
-        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/1.jpg"));
+        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/3.jpg"));
         chancepic2->setGeometry(240,245,45,45);
         break;
     case 4:
-        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/1.jpg"));
+        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/4.jpg"));
         chancepic2->setGeometry(240,245,45,45);
         break;
     case 5:
-        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/1.jpg"));
+        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/5.jpg"));
         chancepic2->setGeometry(240,240,50,50);
         break;
     case 6:
-        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/1.jpg"));
+        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/6.jpg"));
         chancepic2->setGeometry(240,245,45,45);
         break;
     default:
