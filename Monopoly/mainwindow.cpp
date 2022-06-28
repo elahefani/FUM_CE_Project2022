@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QPixmap>
 #include <QMessageBox>
-#include <Game.h>
+//#include <Game.h>
 #include <string>
 
 
@@ -27,7 +27,7 @@ void MainWindow::on_choice2_clicked()
     ui->groupBox->hide();
     ui->choice2->hide();
     game.setNumOfPlayer(2);
-    QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
 
@@ -42,7 +42,7 @@ void MainWindow::on_choice3_clicked()
     ui->groupBox->hide();
     ui->choice3->hide();
     game.setNumOfPlayer(3);
-    QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
 
@@ -58,7 +58,7 @@ void MainWindow::on_choice4_clicked()
     ui->groupBox->hide();
     ui->choice4->hide();
     game.setNumOfPlayer(4);
-    QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
 
@@ -75,7 +75,7 @@ void MainWindow::on_choice5_clicked()
     ui->groupBox->hide();
     ui->choice5->hide();
     game.setNumOfPlayer(5);
-    QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
 
@@ -93,7 +93,7 @@ void MainWindow::on_choice6_clicked()
     ui->groupBox->hide();
     ui->choice6->hide();
     game.setNumOfPlayer(6);
-    QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
 
@@ -112,7 +112,7 @@ void MainWindow::on_choice7_clicked()
     ui->groupBox->hide();
     ui->choice7->hide();
     game.setNumOfPlayer(7);
-    QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
 
@@ -132,7 +132,7 @@ void MainWindow::on_choice8_clicked()
     ui->groupBox->hide();
     ui->choice8->hide();
     game.setNumOfPlayer(8);
-    QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
     ui->Board->setPixmap(pm);
     ui->Board->setScaledContents(true);
 
@@ -149,38 +149,79 @@ void MainWindow::on_choice8_clicked()
 
 void MainWindow::CreatePlayers(int name){
     QLabel *player = new QLabel(this);
+    coordinate Coordinates;
     switch (name) {
     case barrow:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/barrow.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/barrow.png"));
         player->setGeometry(460,405,25,25);
+        Coordinates.x=460;
+        Coordinates.y=405;
+        Coordinates.height=25;
+        Coordinates.width=25;
+        game.player[0].setCoordinates(Coordinates);
         break;
     case baseball:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/baseball.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/baseball.png"));
         player->setGeometry(460,425,25,25);
+        Coordinates.x=460;
+        Coordinates.y=425;
+        Coordinates.height=25;
+        Coordinates.width=25;
+        game.player[0].setCoordinates(Coordinates);
         break;
     case car:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/car.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/car.png"));
         player->setGeometry(440,405,25,25);
+        Coordinates.x=440;
+        Coordinates.y=405;
+        Coordinates.height=25;
+        Coordinates.width=25;
+        game.player[0].setCoordinates(Coordinates);
         break;
     case dog:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/dog.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/dog.png"));
         player->setGeometry(440,425,25,25);
+        Coordinates.x=440;
+        Coordinates.y=425;
+        Coordinates.height=25;
+        Coordinates.width=25;
+        game.player[0].setCoordinates(Coordinates);
         break;
     case dragon:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/dragon.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/dragon.png"));
         player->setGeometry(420,405,25,25);
+        Coordinates.x=420;
+        Coordinates.y=405;
+        Coordinates.height=25;
+        Coordinates.width=25;
+        game.player[0].setCoordinates(Coordinates);
         break;
     case ship:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/ship.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/ship.png"));
         player->setGeometry(420,425,25,25);
+        Coordinates.x=420;
+        Coordinates.y=425;
+        Coordinates.height=25;
+        Coordinates.width=25;
+        game.player[0].setCoordinates(Coordinates);
         break;
     case soccer:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/soccer.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/soccer.png"));
         player->setGeometry(420,445,25,25);
+        Coordinates.x=420;
+        Coordinates.y=445;
+        Coordinates.height=25;
+        Coordinates.width=25;
+        game.player[0].setCoordinates(Coordinates);
         break;
     case surfer:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/surfer.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/surfer.png"));
         player->setGeometry(440,445,25,25);
+        Coordinates.x=440;
+        Coordinates.y=445;
+        Coordinates.height=25;
+        Coordinates.width=25;
+        game.player[0].setCoordinates(Coordinates);
         break;
     default:
         break;

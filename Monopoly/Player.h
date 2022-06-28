@@ -1,17 +1,20 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+#include<Game.h>
+#include<QString>
 
 
-struct coor
+struct coordinate
 {
-    int x,y,z,t;
+    int x,y,height,width;
 };
 
 class Player{
 private:
     long long int Money;
     int Pair;
-    coor Coordinates;
+    coordinate Coordinates;
+    QString PlayerName;
 public:
 
     Player();
@@ -21,8 +24,11 @@ public:
     void setPair( int);
     int getPair();
 
-    //void setCoordinates( int);
-    //int getCoordinates();
+    void setCoordinates(coordinate);
+    //coordinate getCoordinates();
+
+    void setPlayerName(QString );
+    QString getPlayrtName();
 };
 
 #endif // PLAYER_H

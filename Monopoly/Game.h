@@ -16,7 +16,6 @@ public:
     void setNumOfPlayer(int );
     int getNumOfPlayer();
     void setDefPlayer();
-    void setPlayer(long long int ,int ,int ,int ,int ,int );
 
 
 };

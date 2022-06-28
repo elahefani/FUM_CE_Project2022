@@ -21,7 +21,3 @@ void Game::setDefPlayer(){
         player[i].setPair(0);
     }
 }
-
-void Game::setPlayer(long long int Money,int Pair,int x,int y,int z,int t){
-
-}

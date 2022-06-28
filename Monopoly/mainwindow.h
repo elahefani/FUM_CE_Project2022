@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include <Game.h>
-#include <Player.h>
+//#include <Player.h>
 #include <QMainWindow>
 #include <string>
 
