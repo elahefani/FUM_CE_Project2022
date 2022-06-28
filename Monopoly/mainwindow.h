@@ -30,11 +30,7 @@ private slots:
     void on_choice7_clicked();
     void on_choice8_clicked();
 
-    void on_pushButton_clicked();
-
     void on_Chance_clicked();
-
-    void on_label_linkActivated(const QString &link);
 
 private:
     Ui::MainWindow *ui;
