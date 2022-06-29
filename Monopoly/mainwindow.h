@@ -4,6 +4,8 @@
 //#include <Player.h>
 #include <QMainWindow>
 #include <string>
+#include <QLabel>
+#include <QPushButton>
 
 
 
@@ -21,6 +23,7 @@ public:
     void PrintBoardGame(int );
     int RandomGenerator();
     void CreatePlayers(int );
+    void Dice();
     ~MainWindow();
 
 private slots:
@@ -32,9 +35,15 @@ private slots:
     void on_choice7_clicked();
     void on_choice8_clicked();
 
-    void on_Chance_clicked();
+    void on_Dice_clicked();
+
 
 private:
     Ui::MainWindow *ui;
+    QLabel *board = new QLabel(this);
+    QLabel *chancepic1 = new QLabel(this);
+    QLabel *chancepic2 = new QLabel(this);
+    QPushButton *DicePtr = new QPushButton(this);
+
 };
 #endif // MAINWINDOW_H

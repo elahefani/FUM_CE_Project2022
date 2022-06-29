@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[10];
-    char stringdata0[163];
+    char stringdata0[161];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -41,14 +41,14 @@ QT_MOC_LITERAL(5, 69, 18), // "on_choice5_clicked"
 QT_MOC_LITERAL(6, 88, 18), // "on_choice6_clicked"
 QT_MOC_LITERAL(7, 107, 18), // "on_choice7_clicked"
 QT_MOC_LITERAL(8, 126, 18), // "on_choice8_clicked"
-QT_MOC_LITERAL(9, 145, 17) // "on_Chance_clicked"
+QT_MOC_LITERAL(9, 145, 15) // "on_Dice_clicked"
 
     },
     "MainWindow\0on_choice2_clicked\0\0"
     "on_choice3_clicked\0on_choice4_clicked\0"
     "on_choice5_clicked\0on_choice6_clicked\0"
     "on_choice7_clicked\0on_choice8_clicked\0"
-    "on_Chance_clicked"
+    "on_Dice_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -101,7 +101,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 4: _t->on_choice6_clicked(); break;
         case 5: _t->on_choice7_clicked(); break;
         case 6: _t->on_choice8_clicked(); break;
-        case 7: _t->on_Chance_clicked(); break;
+        case 7: _t->on_Dice_clicked(); break;
         default: ;
         }
     }

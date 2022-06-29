@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    DicePtr->hide();
 }
 
 MainWindow::~MainWindow()
@@ -29,7 +30,6 @@ int MainWindow::RandomGenerator(){
     int num;
     //srand(time(0));
     num = (rand() % 6) + 1;
-    //qDebug()<< num;
     return num;
 }
 
@@ -37,11 +37,22 @@ void MainWindow::PrintBoardGame(int NumOfPlayer){
     ui->groupBox->hide();
     game.setNumOfPlayer(NumOfPlayer);
     QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
-    ui->Board->setPixmap(pm);
-    ui->Board->setScaledContents(true);
+    board->setPixmap(pm);
+    board->setScaledContents(true);
+    board->setGeometry(20,10,600,600);
+    board->show();
     for(int i =0; i<NumOfPlayer; i++){
         CreatePlayers(i);
     }
+    Dice();
+}
+
+void MainWindow::Dice(){
+    QPushButton *Dice = new QPushButton(this);
+    DicePtr = Dice;
+    connect(Dice,SIGNAL(clicked()),this,SLOT(on_Dice_clicked()));
+    Dice->setGeometry(127,115,140,70);
+    Dice->show();
 }
 
 void MainWindow::on_choice2_clicked()
@@ -78,6 +89,7 @@ void MainWindow::on_choice6_clicked()
     ui->choice6->hide();
     PrintBoardGame(6);
 }
+
 
 void MainWindow::on_choice7_clicked()
 {
@@ -180,40 +192,35 @@ void MainWindow::CreatePlayers(int name){
     player->show();
 }
 
-void MainWindow::on_Chance_clicked()
-{
+void MainWindow::on_Dice_clicked(){
     int number1 = RandomGenerator();
     int number2 = RandomGenerator();
-
-    QLabel *chancepic1 = new QLabel(this);
-    QLabel *chancepic2 = new QLabel(this);
-
     // Gemetries should set
     switch (number1)
     {
     case 1:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/1.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/1.png"));
         chancepic1->setGeometry(130,120,60,60);
         //qDebug()<<number1;
         break;
     case 2:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/2.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/2.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 3:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/3.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/3.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 4:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/4.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/4.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 5:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/5.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/5.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 6:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/6.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/6.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     default:
@@ -228,27 +235,27 @@ void MainWindow::on_Chance_clicked()
     switch (number2)
     {
     case 1:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/1.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/1.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 2:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/2.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/2.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 3:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/3.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/3.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 4:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/4.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/4.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 5:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/5.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/5.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 6:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/6.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/6.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     default:
@@ -259,5 +266,6 @@ void MainWindow::on_Chance_clicked()
     chancepic2->setFixedHeight(60);
     chancepic2->setScaledContents(true);
     chancepic2->show();
+    DicePtr->hide();
 
 }

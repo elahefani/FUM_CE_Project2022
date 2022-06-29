@@ -12,9 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGroupBox>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -25,7 +23,6 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QLabel *Board;
     QGroupBox *groupBox;
     QRadioButton *choice2;
     QRadioButton *choice3;
@@ -34,7 +31,6 @@ public:
     QRadioButton *choice6;
     QRadioButton *choice7;
     QRadioButton *choice8;
-    QPushButton *Chance;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -44,9 +40,6 @@ public:
         MainWindow->resize(644, 629);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        Board = new QLabel(centralwidget);
-        Board->setObjectName(QString::fromUtf8("Board"));
-        Board->setGeometry(QRect(20, 10, 600, 600));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
         groupBox->setGeometry(QRect(240, 190, 171, 171));
@@ -75,9 +68,6 @@ public:
         choice8 = new QRadioButton(groupBox);
         choice8->setObjectName(QString::fromUtf8("choice8"));
         choice8->setGeometry(QRect(10, 140, 85, 20));
-        Chance = new QPushButton(centralwidget);
-        Chance->setObjectName(QString::fromUtf8("Chance"));
-        Chance->setGeometry(QRect(280, 410, 101, 61));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -91,7 +81,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        Board->setText(QString());
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Please choose number of players", nullptr));
         choice2->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
         choice3->setText(QCoreApplication::translate("MainWindow", "3", nullptr));
@@ -100,7 +89,6 @@ public:
         choice6->setText(QCoreApplication::translate("MainWindow", "6", nullptr));
         choice7->setText(QCoreApplication::translate("MainWindow", "7", nullptr));
         choice8->setText(QCoreApplication::translate("MainWindow", "8", nullptr));
-        Chance->setText(QCoreApplication::translate("MainWindow", "Chance", nullptr));
     } // retranslateUi
 
 };
