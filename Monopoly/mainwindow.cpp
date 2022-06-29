@@ -8,6 +8,7 @@
 #include <string>
 #include <iostream>
 #include <time.h>
+#include <ctime>
 
 enum PlayerName{barrow,baseball,car,dog,dragon,ship,soccer,surfer};
 
@@ -26,7 +27,7 @@ MainWindow::~MainWindow()
 int randomgenerator(){
 
     int num;
-    srand(time(0));
+    //srand(time(0));
     num = (rand() % 6) + 1;
     //qDebug()<< num;
     return num;
@@ -261,23 +262,23 @@ void MainWindow::on_Chance_clicked()
         //qDebug()<<number1;
         break;
     case 2:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/1.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/2.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 3:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/1.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/3.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 4:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/1.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/4.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 5:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/1.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/5.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 6:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/1.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/6.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     default:
