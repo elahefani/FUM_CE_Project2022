@@ -18,6 +18,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     Game game;
+    void PrintBoardGame(int );
+    int RandomGenerator();
     void CreatePlayers(int );
     ~MainWindow();
 

@@ -41,15 +41,15 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(498, 503);
+        MainWindow->resize(644, 629);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         Board = new QLabel(centralwidget);
         Board->setObjectName(QString::fromUtf8("Board"));
-        Board->setGeometry(QRect(20, 10, 461, 461));
+        Board->setGeometry(QRect(20, 10, 600, 600));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(160, 140, 171, 171));
+        groupBox->setGeometry(QRect(240, 190, 171, 171));
         groupBox->setMouseTracking(false);
         groupBox->setTabletTracking(false);
         groupBox->setAutoFillBackground(true);
@@ -77,7 +77,7 @@ public:
         choice8->setGeometry(QRect(10, 140, 85, 20));
         Chance = new QPushButton(centralwidget);
         Chance->setObjectName(QString::fromUtf8("Chance"));
-        Chance->setGeometry(QRect(200, 350, 101, 61));
+        Chance->setGeometry(QRect(280, 410, 101, 61));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
