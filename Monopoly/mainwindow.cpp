@@ -69,7 +69,8 @@ void MainWindow::Dice(){
     QPushButton *Dice = new QPushButton(this);
     DicePtr = Dice;
     connect(Dice,SIGNAL(clicked()),this,SLOT(on_Dice_clicked()));
-    Dice->setGeometry(127,115,140,70);
+    Dice->setGeometry(128,200,140,70);
+    Dice->setText("Roll the dice");
     Dice->show();
 }
 
@@ -703,6 +704,12 @@ void MainWindow::on_Dice_clicked(){
     chancepic2->setFixedHeight(60);
     chancepic2->setScaledContents(true);
     chancepic2->show();
-    DicePtr->hide();
+
+    if (number1 == number2)
+    {
+        QMessageBox::information(this ,"Message", "Pair of dice ");
+    }
+
+    //DicePtr->hide();
 
 }
