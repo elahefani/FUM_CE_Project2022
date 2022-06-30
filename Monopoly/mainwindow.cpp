@@ -18,6 +18,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     DicePtr->hide();
+    ui->groupBox->setStyleSheet("background-color : lightblue");
+    playerName1_ptr->hide();
+    labelName1_ptr->hide();
+    GroupName_ptr->hide();
+    buttonName_ptr->hide();
 }
 
 MainWindow::~MainWindow()
@@ -34,8 +39,6 @@ int MainWindow::RandomGenerator(){
 }
 
 void MainWindow::PrintBoardGame(int NumOfPlayer){
-    ui->groupBox->hide();
-    game.setNumOfPlayer(NumOfPlayer);
     QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
     board->setPixmap(pm);
     board->setScaledContents(true);
@@ -44,6 +47,7 @@ void MainWindow::PrintBoardGame(int NumOfPlayer){
     for(int i =0; i<NumOfPlayer; i++){
         CreatePlayers(i);
     }
+
     Dice();
 }
 
@@ -55,54 +59,121 @@ void MainWindow::Dice(){
     Dice->show();
 }
 
+void MainWindow::setGroupName(){
+    QGroupBox *GroupName = new QGroupBox(this);
+    GroupName->setGeometry(240,190,171,171);
+    GroupName->setTitle(" Please enter name of players ");
+    GroupName->setAutoFillBackground(true);
+    GroupName->setStyleSheet("background-color : lightgreen");
+    GroupName->show();
+    GroupName_ptr = GroupName;
+}
+
+void MainWindow::setLabelName(QLabel * name, QString text, int x, int y){
+    name->setGeometry(x,y,60,20);
+    name->setText(text);
+    name->show();
+}
+
+
+void MainWindow::setPushbuttonName(){
+    QPushButton *NameButton = new QPushButton(this);
+    NameButton->setGeometry(293,335,70,20);
+    NameButton->show();
+    connect(NameButton,SIGNAL(clicked()),this,SLOT(on_PushbottonName_clicked()));
+    NameButton->setText("OK");
+    buttonName_ptr=NameButton;
+
+    QLineEdit *playerName1=new QLineEdit(this);
+    switch (game.getNumOfPlayer()) {
+    case 2:
+        playerName1->setGeometry(300,212,70,20);
+        playerName1->show();
+        playerName1_ptr = playerName1;
+        break;
+    default:
+        break;
+    }
+}
+
+
+void MainWindow::on_PushbottonName_clicked(){
+    QString name = playerName1_ptr->text();
+    playerName1_ptr->hide();
+    GroupName_ptr->hide();
+    labelName1_ptr->hide();
+    buttonName_ptr->hide();
+    qDebug()<<name;
+    PrintBoardGame(game.getNumOfPlayer());
+
+}
+
 void MainWindow::on_choice2_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 2 players. ");
+    ui->groupBox->hide();
     ui->choice2->hide();
-    PrintBoardGame(2);
+    game.setNumOfPlayer(2);
+
+    setGroupName();
+
+    QLabel *name1 = new QLabel(this);
+    QString text = "barrow :";
+    setLabelName(name1,text,250,210);
+    setPushbuttonName();
+    labelName1_ptr = name1;
+
+
 }
+
 
 void MainWindow::on_choice3_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 3 players. ");
+    ui->groupBox->hide();
     ui->choice3->hide();
-    PrintBoardGame(3);
+    game.setNumOfPlayer(3);
 }
 
 void MainWindow::on_choice4_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 4 players. ");
+    ui->groupBox->hide();
     ui->choice4->hide();
-    PrintBoardGame(4);
+    game.setNumOfPlayer(4);
 }
 
 void MainWindow::on_choice5_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 5 players. ");
+    ui->groupBox->hide();
     ui->choice5->hide();
-    PrintBoardGame(5);
+    game.setNumOfPlayer(5);
 }
 
 void MainWindow::on_choice6_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 6 players. ");
+    ui->groupBox->hide();
     ui->choice6->hide();
-    PrintBoardGame(6);
+    game.setNumOfPlayer(6);
 }
 
 
 void MainWindow::on_choice7_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 7 players. ");
+    ui->groupBox->hide();
     ui->choice7->hide();
-    PrintBoardGame(7);
+    game.setNumOfPlayer(7);
 }
 
 void MainWindow::on_choice8_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 8 players. ");
+    ui->groupBox->hide();
     ui->choice8->hide();
-    PrintBoardGame(8);
+    game.setNumOfPlayer(8);
 
 }
 

@@ -6,6 +6,9 @@
 #include <string>
 #include <QLabel>
 #include <QPushButton>
+#include <QRadioButton>
+#include <QLineEdit>
+#include <QGroupBox>
 
 
 
@@ -24,6 +27,10 @@ public:
     int RandomGenerator();
     void CreatePlayers(int );
     void Dice();
+    void setGroupName();
+    void setLabelName(QLabel* ,QString ,int ,int );
+    void setPushbuttonName();
+
     ~MainWindow();
 
 private slots:
@@ -37,6 +44,7 @@ private slots:
 
     void on_Dice_clicked();
 
+    void on_PushbottonName_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -44,6 +52,10 @@ private:
     QLabel *chancepic1 = new QLabel(this);
     QLabel *chancepic2 = new QLabel(this);
     QPushButton *DicePtr = new QPushButton(this);
+    QLineEdit *playerName1_ptr = new QLineEdit(this);
+    QLabel *labelName1_ptr = new QLabel(this);
+    QGroupBox *GroupName_ptr = new QGroupBox;
+    QPushButton *buttonName_ptr = new QPushButton;
 
 };
 #endif // MAINWINDOW_H
