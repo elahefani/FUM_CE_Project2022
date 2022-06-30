@@ -54,8 +54,20 @@ private:
     QPushButton *DicePtr = new QPushButton(this);
     QLineEdit *playerName1_ptr = new QLineEdit(this);
     QLineEdit *playerName2_ptr = new QLineEdit(this);
+    QLineEdit *playerName3_ptr = new QLineEdit(this);
+    QLineEdit *playerName4_ptr = new QLineEdit(this);
+    QLineEdit *playerName5_ptr = new QLineEdit(this);
+    QLineEdit *playerName6_ptr = new QLineEdit(this);
+    QLineEdit *playerName7_ptr = new QLineEdit(this);
+    QLineEdit *playerName8_ptr = new QLineEdit(this);
     QLabel *labelName1_ptr = new QLabel(this);
     QLabel *labelName2_ptr = new QLabel(this);
+    QLabel *labelName3_ptr = new QLabel(this);
+    QLabel *labelName4_ptr = new QLabel(this);
+    QLabel *labelName5_ptr = new QLabel(this);
+    QLabel *labelName6_ptr = new QLabel(this);
+    QLabel *labelName7_ptr = new QLabel(this);
+    QLabel *labelName8_ptr = new QLabel(this);
     QGroupBox *GroupName_ptr = new QGroupBox;
     QPushButton *buttonName_ptr = new QPushButton;
 
