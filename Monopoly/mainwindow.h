@@ -53,7 +53,9 @@ private:
     QLabel *chancepic2 = new QLabel(this);
     QPushButton *DicePtr = new QPushButton(this);
     QLineEdit *playerName1_ptr = new QLineEdit(this);
+    QLineEdit *playerName2_ptr = new QLineEdit(this);
     QLabel *labelName1_ptr = new QLabel(this);
+    QLabel *labelName2_ptr = new QLabel(this);
     QGroupBox *GroupName_ptr = new QGroupBox;
     QPushButton *buttonName_ptr = new QPushButton;
 

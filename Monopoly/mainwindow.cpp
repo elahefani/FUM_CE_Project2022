@@ -21,6 +21,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->groupBox->setStyleSheet("background-color : lightblue");
     playerName1_ptr->hide();
     labelName1_ptr->hide();
+    playerName2_ptr->hide();
+    labelName2_ptr->hide();
     GroupName_ptr->hide();
     buttonName_ptr->hide();
 }
@@ -85,11 +87,16 @@ void MainWindow::setPushbuttonName(){
     buttonName_ptr=NameButton;
 
     QLineEdit *playerName1=new QLineEdit(this);
+    QLineEdit *playerName2=new QLineEdit(this);
     switch (game.getNumOfPlayer()) {
     case 2:
         playerName1->setGeometry(300,212,70,20);
         playerName1->show();
         playerName1_ptr = playerName1;
+
+        playerName2->setGeometry(300,232,70,20);
+        playerName2->show();
+        playerName2_ptr = playerName2;
         break;
     default:
         break;
@@ -99,9 +106,11 @@ void MainWindow::setPushbuttonName(){
 
 void MainWindow::on_PushbottonName_clicked(){
     QString name = playerName1_ptr->text();
-    playerName1_ptr->hide();
     GroupName_ptr->hide();
+    playerName1_ptr->hide();
     labelName1_ptr->hide();
+    playerName2_ptr->hide();
+    labelName2_ptr->hide();
     buttonName_ptr->hide();
     qDebug()<<name;
     PrintBoardGame(game.getNumOfPlayer());
@@ -112,16 +121,20 @@ void MainWindow::on_choice2_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 2 players. ");
     ui->groupBox->hide();
-    ui->choice2->hide();
     game.setNumOfPlayer(2);
 
     setGroupName();
 
     QLabel *name1 = new QLabel(this);
+    QLabel *name2 = new QLabel(this);
     QString text = "barrow :";
     setLabelName(name1,text,250,210);
+    text = "baseball :";
+    setLabelName(name2,text,250,230);
     setPushbuttonName();
     labelName1_ptr = name1;
+    labelName2_ptr = name2;
+
 
 
 }
@@ -131,7 +144,6 @@ void MainWindow::on_choice3_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 3 players. ");
     ui->groupBox->hide();
-    ui->choice3->hide();
     game.setNumOfPlayer(3);
 }
 
@@ -139,7 +151,6 @@ void MainWindow::on_choice4_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 4 players. ");
     ui->groupBox->hide();
-    ui->choice4->hide();
     game.setNumOfPlayer(4);
 }
 
@@ -147,7 +158,6 @@ void MainWindow::on_choice5_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 5 players. ");
     ui->groupBox->hide();
-    ui->choice5->hide();
     game.setNumOfPlayer(5);
 }
 
@@ -155,7 +165,6 @@ void MainWindow::on_choice6_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 6 players. ");
     ui->groupBox->hide();
-    ui->choice6->hide();
     game.setNumOfPlayer(6);
 }
 
@@ -164,7 +173,6 @@ void MainWindow::on_choice7_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 7 players. ");
     ui->groupBox->hide();
-    ui->choice7->hide();
     game.setNumOfPlayer(7);
 }
 
@@ -172,7 +180,6 @@ void MainWindow::on_choice8_clicked()
 {
     QMessageBox::information(this ,"Message", "Game will start with 8 players. ");
     ui->groupBox->hide();
-    ui->choice8->hide();
     game.setNumOfPlayer(8);
 
 }
