@@ -4,7 +4,7 @@
 #include <QMessageBox>
 #include <QString>
 #include <QDebug>
-//#include <Game.h>
+#include <Game.h>
 #include <string>
 #include <iostream>
 #include <time.h>
@@ -263,7 +263,15 @@ void MainWindow::setPushbuttonName(){
 
 
 void MainWindow::on_PushbottonName_clicked(){
-    QString name = playerName1_ptr->text();
+    game.players.setPlayerName(playerName1_ptr->text(), 0);
+    game.players.setPlayerName(playerName2_ptr->text(), 1);
+    game.players.setPlayerName(playerName3_ptr->text(), 2);
+    game.players.setPlayerName(playerName4_ptr->text(), 3);
+    game.players.setPlayerName(playerName5_ptr->text(), 4);
+    game.players.setPlayerName(playerName6_ptr->text(), 5);
+    game.players.setPlayerName(playerName7_ptr->text(), 6);
+    game.players.setPlayerName(playerName8_ptr->text(), 7);
+
     GroupName_ptr->hide();
 
     playerName1_ptr->hide();
@@ -292,7 +300,8 @@ void MainWindow::on_PushbottonName_clicked(){
 
     buttonName_ptr->hide();
 
-    qDebug()<<name;
+    //qDebug() << game.players.getPlayerName(1);
+
     PrintBoardGame(game.getNumOfPlayer());
 
 }
