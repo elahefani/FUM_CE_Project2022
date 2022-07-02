@@ -5,6 +5,7 @@
 #include <QString>
 #include <QDebug>
 #include <Game.h>
+#include <Player.h>
 #include <string>
 #include <iostream>
 #include <time.h>
@@ -131,7 +132,6 @@ void MainWindow::setPushbuttonName(){
     buttonName_ptr=NameButton;
     QLineEdit *p[8];
 
-
     int y=212;
     for (int i = 0; i < game.getNumOfPlayer(); ++i) {
         p[i] = new QLineEdit(this);
@@ -140,7 +140,6 @@ void MainWindow::setPushbuttonName(){
         p[i]->show();
         playerName_ptr[i] =p[i];
     }
-
 }
 
 
@@ -152,6 +151,10 @@ void MainWindow::on_PushbottonName_clicked(){
 
     for (int i = 0; i < 8; ++i) {
         game.player[i]->setPlayerName(playerName_ptr[i]->text());
+        if (game.player[i]->getPlayerName() == "")
+        {
+            QMessageBox::information(this ,"Message", "Please Enter players names ");
+        }
         playerName_ptr[i]->hide();
         labelName_ptr[i]->hide();
     }
