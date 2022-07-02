@@ -16,9 +16,9 @@ private:
     long long int Money;
     int Pair;
     coordinate Coordinates;
-    //QString PlayerName;
+    QString Name;
 public:
-    QString Name[8];
+
 
     Player();
     void setMoney(long long int);
@@ -30,8 +30,8 @@ public:
     void setCoordinates(coordinate);
     //coordinate getCoordinates();
 
-    void setPlayerName(QString, int);
-    QString getPlayerName(int);
+    void setPlayerName(QString );
+    QString getPlayerName();
 
 };
 

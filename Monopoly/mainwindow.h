@@ -28,8 +28,9 @@ public:
     void CreatePlayers(int );
     void Dice();
     void setGroupName();
-    void setLabelName(QLabel* ,QString ,int ,int );
+    void setLabelName();
     void setPushbuttonName();
+    QString ConvertEnumtoString(int );
 
     ~MainWindow();
 
@@ -52,22 +53,9 @@ private:
     QLabel *chancepic1 = new QLabel(this);
     QLabel *chancepic2 = new QLabel(this);
     QPushButton *DicePtr = new QPushButton(this);
-    QLineEdit *playerName1_ptr = new QLineEdit(this);
-    QLineEdit *playerName2_ptr = new QLineEdit(this);
-    QLineEdit *playerName3_ptr = new QLineEdit(this);
-    QLineEdit *playerName4_ptr = new QLineEdit(this);
-    QLineEdit *playerName5_ptr = new QLineEdit(this);
-    QLineEdit *playerName6_ptr = new QLineEdit(this);
-    QLineEdit *playerName7_ptr = new QLineEdit(this);
-    QLineEdit *playerName8_ptr = new QLineEdit(this);
-    QLabel *labelName1_ptr = new QLabel(this);
-    QLabel *labelName2_ptr = new QLabel(this);
-    QLabel *labelName3_ptr = new QLabel(this);
-    QLabel *labelName4_ptr = new QLabel(this);
-    QLabel *labelName5_ptr = new QLabel(this);
-    QLabel *labelName6_ptr = new QLabel(this);
-    QLabel *labelName7_ptr = new QLabel(this);
-    QLabel *labelName8_ptr = new QLabel(this);
+    QLineEdit *playerName_ptr[8];
+
+    QLabel *labelName_ptr[8];
     QGroupBox *GroupName_ptr = new QGroupBox;
     QPushButton *buttonName_ptr = new QPushButton;
 

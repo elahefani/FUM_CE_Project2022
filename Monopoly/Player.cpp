@@ -35,10 +35,10 @@ void Player::setCoordinates(coordinate Coordinates){
     //return Coordinates;
 //}
 
-void Player::setPlayerName(QString Name, int i){
-    this->Name[i] = Name;
+void Player::setPlayerName(QString Name){
+    this->Name = Name;
 }
 
-QString Player::getPlayerName(int i){
-    return Name[i];
+QString Player::getPlayerName(){
+    return Name;
 }
