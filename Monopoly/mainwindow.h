@@ -58,6 +58,7 @@ private:
     QLabel *labelName_ptr[8];
     QGroupBox *GroupName_ptr = new QGroupBox;
     QPushButton *buttonName_ptr = new QPushButton;
+    QLabel *PlayerLabel[8];
 
 };
 #endif // MAINWINDOW_H

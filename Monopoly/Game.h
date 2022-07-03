@@ -10,7 +10,7 @@ class Game
 private:
     int NumOfPlayer;
 public:
-    Player players;
+    //Player players;
     Player *player[MaxSizeOfPlayer];
     Game();
     void setNumOfPlayer(int );

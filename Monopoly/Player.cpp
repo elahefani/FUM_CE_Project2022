@@ -42,3 +42,11 @@ void Player::setPlayerName(QString Name){
 QString Player::getPlayerName(){
     return Name;
 }
+
+int Player::getX(){
+    return Coordinates.x;
+}
+
+int Player::getY(){
+    return Coordinates.y;
+}

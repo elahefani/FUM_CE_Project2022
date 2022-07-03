@@ -11,6 +11,8 @@
 #include <time.h>
 #include <ctime>
 
+int Counter=0;
+
 enum PlayerName{barrow,baseball,car,dog,dragon,ship,soccer,surfer};
 
 MainWindow::MainWindow(QWidget *parent)
@@ -26,8 +28,10 @@ MainWindow::MainWindow(QWidget *parent)
     for (int i = 0; i < 8; ++i) {
         playerName_ptr[i] = new QLineEdit(this);
         labelName_ptr[i] = new QLabel(this);
+        PlayerLabel[i]= new QLabel(this);
         playerName_ptr[i]->hide();
         labelName_ptr[i]->hide();
+        PlayerLabel[i]->hide();
     }
 }
 
@@ -147,23 +151,18 @@ void MainWindow::on_PushbottonName_clicked(){
 
     //check beshe ke hame bazikuna esm daran va esm hashon shabih nis
 
-    GroupName_ptr->hide();
-
-    for (int i = 0; i < 8; ++i) {
+    for (int i = 0; i < game.getNumOfPlayer(); ++i) {
         game.player[i]->setPlayerName(playerName_ptr[i]->text());
-        if (game.player[i]->getPlayerName() == "")
-        {
-            QMessageBox::information(this ,"Message", "Please Enter players names ");
-        }
         playerName_ptr[i]->hide();
         labelName_ptr[i]->hide();
     }
-
+    GroupName_ptr->hide();
     buttonName_ptr->hide();
 
     PrintBoardGame(game.getNumOfPlayer());
 
 }
+
 
 void MainWindow::on_choice2_clicked()
 {
@@ -261,13 +260,14 @@ void MainWindow::CreatePlayers(int name){
     coordinate Coordinates;
     switch (name) {
     case barrow:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/barrow.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/barrow.png"));
         player->setGeometry(590,535,25,25);
         Coordinates.x=460;
         Coordinates.y=405;
         Coordinates.height=25;
         Coordinates.width=25;
         game.player[0]->setCoordinates(Coordinates);
+        PlayerLabel[barrow] = player;
         break;
     case baseball:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/baseball.png"));
@@ -277,6 +277,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.height=25;
         Coordinates.width=25;
         game.player[1]->setCoordinates(Coordinates);
+        PlayerLabel[baseball] = player;
         break;
     case car:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/car.png"));
@@ -286,6 +287,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.height=25;
         Coordinates.width=25;
         game.player[2]->setCoordinates(Coordinates);
+        PlayerLabel[car] = player;
         break;
     case dog:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/dog.png"));
@@ -295,6 +297,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.height=25;
         Coordinates.width=25;
         game.player[3]->setCoordinates(Coordinates);
+        PlayerLabel[dog] = player;
         break;
     case dragon:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/dragon.png"));
@@ -304,6 +307,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.height=25;
         Coordinates.width=25;
         game.player[4]->setCoordinates(Coordinates);
+        PlayerLabel[dragon] = player;
         break;
     case ship:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/ship.png"));
@@ -313,6 +317,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.height=25;
         Coordinates.width=25;
         game.player[5]->setCoordinates(Coordinates);
+        PlayerLabel[ship] = player;
         break;
     case soccer:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/soccer.png"));
@@ -322,6 +327,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.height=25;
         Coordinates.width=25;
         game.player[6]->setCoordinates(Coordinates);
+        PlayerLabel[soccer] = player;
         break;
     case surfer:
         player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/surfer.png"));
@@ -331,6 +337,7 @@ void MainWindow::CreatePlayers(int name){
         Coordinates.height=25;
         Coordinates.width=25;
         game.player[7]->setCoordinates(Coordinates);
+        PlayerLabel[surfer] = player;
         break;
     default:
         break;
@@ -423,5 +430,12 @@ void MainWindow::on_Dice_clicked(){
     }
 
     //DicePtr->hide();
+    if(Counter == game.getNumOfPlayer()){
+        Counter = 0;
+    }
+    else{
+        Counter++;
+    }
 
+    PlayerLabel[Counter]->setGeometry(game.player[Counter]->getX()-10*(number1+number2) ,game.player[Counter]->getY() ,60 ,60);
 }
