@@ -59,4 +59,12 @@ void Player::setY(int y){
     Coordinates.y = y;
 }
 
+void Player::removeMoney(int Money)
+{
+    this->Money -= Money;
+}
 
+void Player::addMoney(int Money)
+{
+    this->Money += Money;
+}

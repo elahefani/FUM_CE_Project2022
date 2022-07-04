@@ -24,6 +24,9 @@ public:
     void setMoney(long long int);
     long long int getMoney();
 
+    void removeMoney(int);
+    void addMoney(int);
+
     void setPair( int);
     int getPair();
 
