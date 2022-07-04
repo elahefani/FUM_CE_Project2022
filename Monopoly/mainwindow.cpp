@@ -12,6 +12,8 @@
 #include <ctime>
 
 int Counter=0;
+int flag = 0;
+int flag1 = 0;
 
 enum PlayerName{barrow,baseball,car,dog,dragon,ship,soccer,surfer};
 
@@ -54,6 +56,10 @@ void MainWindow::PrintBoardGame(int NumOfPlayer){
     board->setScaledContents(true);
     board->setGeometry(20,10,600,600);
     board->show();
+    QLabel *turn = new QLabel(this);
+    turn->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Turn/1.jpg"));
+    turn->setGeometry(284,120,250,50);
+    turn->show();
     for(int i =0; i<NumOfPlayer; i++){
         CreatePlayers(i);
     }
@@ -349,6 +355,7 @@ void MainWindow::CreatePlayers(int name){
     player->show();
 }
 
+
 void MainWindow::on_Dice_clicked(){
     int number1 = RandomGenerator();
     int number2 = RandomGenerator();
@@ -396,7 +403,7 @@ void MainWindow::on_Dice_clicked(){
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 2:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/Chance/2.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/2.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 3:
@@ -428,6 +435,131 @@ void MainWindow::on_Dice_clicked(){
     {
         QMessageBox::information(this ,"Message", "Pair of dice ");
     }
+
+    // Show Players Turn
+    int numberofplayers = game.getNumOfPlayer();
+    QLabel *turn = new QLabel(this);
+    if (flag1 == -1)
+    {
+        turn->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Turn/1.jpg"));
+        turn->setGeometry(284,120,250,50);
+        turn->show();
+        //qDebug() << "Player 1 turn";
+        flag1 = 0;
+    }
+    else if (flag == 0)
+    {
+        turn->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Turn/2.jpg"));
+        turn->setGeometry(284,120,250,50);
+        turn->show();
+        //qDebug() << "Player 2 turn";
+        if (flag < (numberofplayers - 2))
+        {
+            flag++;
+        }
+        else
+        {
+            flag = 0;
+            flag1 = -1;
+        }
+    }
+    else if (flag == 1)
+    {
+        turn->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Turn/3.jpg"));
+        turn->setGeometry(284,120,250,50);
+        turn->show();
+        //qDebug() << "Player 3 turn";
+        if (flag < (numberofplayers - 2))
+        {
+            flag++;
+        }
+        else
+        {
+            flag = 0;
+            flag1 = -1;
+        }
+    }
+    else if (flag == 2)
+    {
+        turn->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Turn/4.jpg"));
+        turn->setGeometry(284,120,250,50);
+        turn->show();
+        //qDebug() << "Player 4 turn";
+        if (flag < (numberofplayers - 2))
+        {
+            flag++;
+        }
+        else
+        {
+            flag = 0;
+            flag1 = -1;
+        }
+    }
+    else if (flag == 3)
+    {
+        turn->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Turn/5.jpg"));
+        turn->setGeometry(284,120,250,50);
+        turn->show();
+        //qDebug() << "Player 5 turn";
+        if (flag < (numberofplayers - 2))
+        {
+            flag++;
+        }
+        else
+        {
+            flag = 0;
+            flag1 = -1;
+        }
+    }
+    else if (flag == 4)
+    {
+        turn->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Turn/6.jpg"));
+        turn->setGeometry(284,120,250,50);
+        turn->show();
+        //qDebug() << "Player 6 turn";
+        if (flag < (numberofplayers - 2))
+        {
+            flag++;
+        }
+        else
+        {
+            flag = 0;
+            flag1 = -1;
+        }
+    }
+    else if (flag == 5)
+    {
+        turn->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Turn/7.jpg"));
+        turn->setGeometry(284,120,250,50);
+        turn->show();
+        //qDebug() << "Player 7 turn";
+        if (flag < (numberofplayers - 2))
+        {
+            flag++;
+        }
+        else
+        {
+            flag = 0;
+            flag1 = -1;
+        }
+    }
+    else if (flag == 6)
+    {
+        turn->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Turn/8.jpg"));
+        turn->setGeometry(284,120,250,50);
+        turn->show();
+        //qDebug() << "Player 8 turn";
+        if (flag < (numberofplayers - 2))
+        {
+            flag++;
+        }
+        else
+        {
+            flag = 0;
+            flag1 = -1;
+        }
+    }
+
 
     //DicePtr->hide();
     if(Counter == (game.getNumOfPlayer()-1)){
