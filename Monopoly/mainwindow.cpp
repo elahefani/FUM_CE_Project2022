@@ -49,7 +49,7 @@ int MainWindow::RandomGenerator(){
 }
 
 void MainWindow::PrintBoardGame(int NumOfPlayer){
-    QPixmap pm("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/BoardImage/Monopoly.jpg");
+    QPixmap pm("C:/Users/modern/Desktop/Project/Monopoly/BoardImage/Monopoly.jpg");
     board->setPixmap(pm);
     board->setScaledContents(true);
     board->setGeometry(20,10,600,600);
@@ -270,7 +270,7 @@ void MainWindow::CreatePlayers(int name){
         PlayerLabel[barrow] = player;
         break;
     case baseball:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/baseball.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/baseball.png"));
         player->setGeometry(590,555,25,25);
         Coordinates.x=460;
         Coordinates.y=425;
@@ -280,7 +280,7 @@ void MainWindow::CreatePlayers(int name){
         PlayerLabel[baseball] = player;
         break;
     case car:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/car.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/car.png"));
         player->setGeometry(570,535,25,25);
         Coordinates.x=440;
         Coordinates.y=405;
@@ -290,7 +290,7 @@ void MainWindow::CreatePlayers(int name){
         PlayerLabel[car] = player;
         break;
     case dog:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/dog.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/dog.png"));
         player->setGeometry(570,555,25,25);
         Coordinates.x=440;
         Coordinates.y=425;
@@ -300,7 +300,7 @@ void MainWindow::CreatePlayers(int name){
         PlayerLabel[dog] = player;
         break;
     case dragon:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/dragon.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/dragon.png"));
         player->setGeometry(550,535,25,25);
         Coordinates.x=420;
         Coordinates.y=405;
@@ -310,7 +310,7 @@ void MainWindow::CreatePlayers(int name){
         PlayerLabel[dragon] = player;
         break;
     case ship:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/ship.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/ship.png"));
         player->setGeometry(550,555,25,25);
         Coordinates.x=420;
         Coordinates.y=425;
@@ -320,7 +320,7 @@ void MainWindow::CreatePlayers(int name){
         PlayerLabel[ship] = player;
         break;
     case soccer:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/soccer.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/soccer.png"));
         player->setGeometry(550,575,25,25);
         Coordinates.x=420;
         Coordinates.y=445;
@@ -330,7 +330,7 @@ void MainWindow::CreatePlayers(int name){
         PlayerLabel[soccer] = player;
         break;
     case surfer:
-        player->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Pieces/surfer.png"));
+        player->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Pieces/surfer.png"));
         player->setGeometry(575,575,25,25);
         Coordinates.x=440;
         Coordinates.y=445;
@@ -356,28 +356,28 @@ void MainWindow::on_Dice_clicked(){
     switch (number1)
     {
     case 1:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/1.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/1.png"));
         chancepic1->setGeometry(130,120,60,60);
         //qDebug()<<number1;
         break;
     case 2:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/2.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/2.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 3:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/3.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/3.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 4:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/4.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/4.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 5:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/5.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/5.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     case 6:
-        chancepic1->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/6.png"));
+        chancepic1->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/6.png"));
         chancepic1->setGeometry(130,120,60,60);
         break;
     default:
@@ -392,27 +392,27 @@ void MainWindow::on_Dice_clicked(){
     switch (number2)
     {
     case 1:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/1.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/1.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 2:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/2.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/Chance/2.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 3:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/3.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/3.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 4:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/4.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/4.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 5:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/5.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/5.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     case 6:
-        chancepic2->setPixmap(QPixmap("C:/Users/Atmospher-PC/Desktop/Project Or/FUM_CE_Project2022/Monopoly/Chance/6.png"));
+        chancepic2->setPixmap(QPixmap("C:/Users/modern/Desktop/Project/Monopoly/Chance/6.png"));
         chancepic2->setGeometry(210,120,60,60);
         break;
     default:
@@ -430,12 +430,21 @@ void MainWindow::on_Dice_clicked(){
     }
 
     //DicePtr->hide();
-    if(Counter == game.getNumOfPlayer()){
+    if(Counter == (game.getNumOfPlayer()-1)){
         Counter = 0;
     }
     else{
         Counter++;
     }
 
-    PlayerLabel[Counter]->setGeometry(game.player[Counter]->getX()-10*(number1+number2) ,game.player[Counter]->getY() ,60 ,60);
+    int x,y;
+    game.player[Counter]->setX(game.player[Counter]->getX()-10*(number1+number2));
+
+    PlayerLabel[Counter]->setGeometry(game.player[Counter]->getX()-10*(number1+number2) ,game.player[Counter]->getY()+120 ,60 ,60);
+    qDebug()<<game.player[Counter]->getY();
+
 }
+
+
+
+

@@ -50,3 +50,13 @@ int Player::getX(){
 int Player::getY(){
     return Coordinates.y;
 }
+
+void Player::setX(int x){
+    Coordinates.x = x;
+}
+
+void Player::setY(int y){
+    Coordinates.y = y;
+}
+
+

@@ -31,6 +31,8 @@ public:
     //coordinate getCoordinates();
     int getX();
     int getY();
+    void setX(int );
+    void setY(int );
 
     void setPlayerName(QString );
     QString getPlayerName();
