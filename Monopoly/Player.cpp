@@ -19,8 +19,8 @@ long long int Player::getMoney(){
     return Money;
 }
 
-void Player::setPair(int Pair){
-    this->Pair = Pair;
+void Player::setPair(){
+    Pair++;
 }
 
 int Player::getPair(){

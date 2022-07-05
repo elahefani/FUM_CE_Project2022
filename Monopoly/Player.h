@@ -27,7 +27,7 @@ public:
     void removeMoney(int);
     void addMoney(int);
 
-    void setPair( int);
+    void setPair();
     int getPair();
 
     void setCoordinates(coordinate);

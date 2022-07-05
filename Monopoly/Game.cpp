@@ -21,6 +21,6 @@ void Game::setDefPlayer(){
     for(int i; i<NumOfPlayer; i++){
         //playe = new QLabel(this);
         player[i]->setMoney(1500);
-        player[i]->setPair(0);
+        //player[i]->setPair(0);
     }
 }
